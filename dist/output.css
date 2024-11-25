@@ -616,6 +616,10 @@ video {
   margin-left: 1rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -628,32 +632,12 @@ video {
   margin-top: 2rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mt-96 {
-  margin-top: 24rem;
-}
-
-.mt-44 {
-  margin-top: 11rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
 .mt-\[50px\] {
   margin-top: 50px;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .block {
@@ -672,8 +656,20 @@ video {
   height: 2.75rem;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
 .h-6 {
   height: 1.5rem;
+}
+
+.h-\[68px\] {
+  height: 68px;
 }
 
 .h-fit {
@@ -681,12 +677,24 @@ video {
   height: fit-content;
 }
 
-.h-20 {
-  height: 5rem;
+.h-\[44px\] {
+  height: 44px;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-20 {
+  width: 5rem;
 }
 
 .w-28 {
@@ -697,49 +705,36 @@ video {
   width: 1.5rem;
 }
 
+.w-72 {
+  width: 18rem;
+}
+
 .w-96 {
   width: 24rem;
+}
+
+.w-\[339px\] {
+  width: 339px;
+}
+
+.w-\[375px\] {
+  width: 375px;
 }
 
 .w-\[573px\] {
   width: 573px;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-44 {
-  width: 11rem;
-}
-
-.w-60 {
-  width: 15rem;
-}
-
-.w-72 {
-  width: 18rem;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
 .w-\[90\%\] {
   width: 90%;
 }
 
-.w-80 {
-  width: 20rem;
+.w-full {
+  width: 100%;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
-.w-20 {
-  width: 5rem;
+.w-0 {
+  width: 0px;
 }
 
 .grid-cols-1 {
@@ -784,12 +779,20 @@ video {
   overflow: scroll;
 }
 
+.rounded-\[10px\] {
+  border-radius: 10px;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
-.rounded-\[10px\] {
-  border-radius: 10px;
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-b {
@@ -802,6 +805,11 @@ video {
 
 .border-none {
   border-style: none;
+}
+
+.border-\[\#f2f2f2\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(242 242 242 / var(--tw-border-opacity, 1));
 }
 
 .border-\[\#ff9028\] {
@@ -834,9 +842,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-grey1 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity, 1));
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-2 {
@@ -869,8 +877,28 @@ video {
   padding-bottom: 3.5rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pl-\[18px\] {
+  padding-left: 18px;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .pt-14 {
@@ -881,8 +909,44 @@ video {
   padding-top: 5rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .pt-9 {
   padding-top: 2.25rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pt-\[18px\] {
+  padding-top: 18px;
+}
+
+.pl-\[15px\] {
+  padding-left: 15px;
+}
+
+.pt-\[19px\] {
+  padding-top: 19px;
+}
+
+.pl-\[14px\] {
+  padding-left: 14px;
+}
+
+.pt-\[12px\] {
+  padding-top: 12px;
+}
+
+.pl-\[21px\] {
+  padding-left: 21px;
+}
+
+.pr-\[15px\] {
+  padding-right: 15px;
 }
 
 .text-left {
@@ -926,6 +990,10 @@ video {
   line-height: 1rem;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
@@ -946,6 +1014,10 @@ video {
   letter-spacing: -0.025em;
 }
 
+.text-\[\#33333\] {
+  color: #33333;
+}
+
 .text-\[\#828282\] {
   --tw-text-opacity: 1;
   color: rgb(130 130 130 / var(--tw-text-opacity, 1));
@@ -956,9 +1028,9 @@ video {
   color: rgb(255 144 40 / var(--tw-text-opacity, 1));
 }
 
-.text-grey {
+.text-grey1 {
   --tw-text-opacity: 1;
-  color: rgb(189 189 189 / var(--tw-text-opacity, 1));
+  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
 .text-grey3 {
@@ -971,9 +1043,15 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-grey1 {
+.text-\[\#333333\] {
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity, 1));
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .focus\:border-\[\#ff9028\]:focus {
