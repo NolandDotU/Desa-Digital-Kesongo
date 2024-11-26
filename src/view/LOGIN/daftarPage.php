@@ -3,15 +3,16 @@ include "../../controller/user.php";
 
 $user = new User();
 
-$email = $_POST["email"];
-$nama = $_POST["name"];
-$kataSandi = $_POST["password"];
-$kota = $_POST["lokasi"];
-$noHP = $_POST["phone"];
+
 
 if (isset($_POST["register"])) {
+    $email = $_POST["email"];
+    $nama = $_POST["name"];
+    $kataSandi = $_POST["password"];
+    $kota = $_POST["lokasi"];
+    $noHP = $_POST["phone"];
     if ($user->new_user($email, $nama, $kataSandi, $kota, $noHP)) {
-        header("Location: ./OTP.php");
+        echo "Berhasil Mendaftar";
     } else {
         echo "Gagal Mendaftar";
     }
@@ -115,7 +116,7 @@ if (isset($_POST["register"])) {
 
         <!-- Masuk -->
         <div class="mt-4 mb-20 text-center">
-            <p class="text-xs font-nunito font-medium text-[#828282]">Sudah mempunyai akun? <a href="#"
+            <p class="text-xs font-nunito font-medium text-[#828282]">Sudah mempunyai akun? <a href="./loginPage.php"
                     class="text-[#ff9028]">Masuk</a></p>
         </div>
     </form>
