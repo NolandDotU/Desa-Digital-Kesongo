@@ -49,7 +49,7 @@
     <div class="w-[339px] h-[68px] mx-auto bg-white rounded-xl shadow border border-[#f2f2f2]">
       <!-- saldo tabungan -->
       <div class="flex">
-        <img src="/src/assets/WalletICon.svg" class="pl-[15px] pt-[19px]" alt="">
+        <img src="/src/assets/WalletICon.svg" class="pl-[15px] pt-[19px] pb-[19px]" alt="">
         <div class="pl-[14px] pt-[18px]">
           <p class="text-[#828282] text-[10px] font-medium font-nunito tracking-tight">Saldo Tabungan</p>
           <h6 class="text-[#333333] text-sm font-semibold font-nunito tracking-tight">Rp 1.500.000</h6>
@@ -57,10 +57,10 @@
         <img src="/src/assets/Vector 10.svg" class="pl-[31px] pt-[12px]" alt="">
 
         <!-- Poin Tabungan -->
-        <img src="/src/assets/Star.svg" class="pl-[25px] pt-[19px]" alt="">
+        <img src="/src/assets/Star.svg" class="pl-[25px] pt-[20px] pb-[20px]" alt="">
         <div class="pl-[14px] pt-[18px]">
           <p class="text-[#828282] text-[10px] font-medium font-nunito tracking-tight">Poin Tabungan</p>
-          <h6 class="text-[#333333] text-sm font-semibold font-nunito tracking-tight">150 <span class="text-[#828282] text-xs font-normal font-HK tracking-tight">Poin</span></h6>
+          <h6 class="text-[#333333] text-sm font-semibold font-nunito tracking-tight">150 <span class="text-[#828282] text-xs font-normal font-HK-Grostek tracking-tight">Poin</span></h6>
         </div>
       </div>
     </div>
