@@ -7,7 +7,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="../../output.css">
 
     <!-- font Nunito Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
