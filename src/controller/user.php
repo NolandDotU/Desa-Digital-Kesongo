@@ -1,39 +1,29 @@
 <?php
-
 class User
 {
-
-    public $host = "localhost:3307";
-    public $nama = "dbkesongo";
-    public $user = "root";
-    public $kata_sandi = "";
-    public $db;
+    private $host = "localhost";
+    private $nama = "dbkesongo";
+    private $user = "root";
+    private $kata_sandi = "";
+    private $db;
 
     public function __construct()
     {
-        $this->db = new PDO("mysql:host=$this->host;dbname=$this->nama", $this->user, $this->kata_sandi);
+        try {
+            $this->db = new PDO("mysql:host=$this->host;dbname=$this->nama", $this->user, $this->kata_sandi);
+            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die("Koneksi database gagal: " . $e->getMessage());
+        }
     }
 
-
-
-    // public function cekUser($email)
-    // {
-    //     $query = $this->db->prepare("SELECT * FROM tb_user WHERE email = $email");
-    //     $query->bindParam(":email", $email);
-    //     if ($query->execute()) {
-    //         return true;
-    //     }
-    //     return false;
-    // }
-    public function new_user($email, $kata_sandi, $nama, $no_hp, $kota)
+    public function new_user($email, $kata_sandi, $nama, $kota, $no_hp)
     {
-        // if ($this->cekUser($email)) {
-        //     return false;
-        // }
-
-        $query = $this->db->prepare("INSERT INTO tb_user(email,kata_sandi,nama,no_hp,kota) VALUES(:email,:kata_sandi,:nama,:no_hp,:kota)");
+        $hashed_password = password_hash($kata_sandi, PASSWORD_BCRYPT); // Enkripsi kata sandi
+        $query = $this->db->prepare("INSERT INTO tb_user (email, kata_sandi, nama, no_hp, kota) 
+                                 VALUES (:email, :kata_sandi, :nama, :no_hp, :kota)");
         $query->bindParam(":email", $email);
-        $query->bindParam(":kata_sandi", $kata_sandi);
+        $query->bindParam(":kata_sandi", $hashed_password);
         $query->bindParam(":nama", $nama);
         $query->bindParam(":no_hp", $no_hp);
         $query->bindParam(":kota", $kota);
@@ -41,16 +31,15 @@ class User
         return $query->execute();
     }
 
-    public function login($email, $kata_sandi)
+    public function cekUser($email)
     {
-        $query = $this->db->prepare("SELECT * FROM tbkesongo WHERE email = :email AND kata_sandi = :kata_sandi");
+        $query = $this->db->prepare("SELECT * FROM tb_user WHERE email = :email");
         $query->bindParam(":email", $email);
-        $query->bindParam(":kata_sandi", $kata_sandi);
+        $query->execute();
 
-        if ($query->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        return $query->rowCount() > 0;
     }
+
 }
+
+?>

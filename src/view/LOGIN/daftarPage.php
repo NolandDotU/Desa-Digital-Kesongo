@@ -3,21 +3,31 @@ include "../../controller/user.php";
 
 $user = new User();
 
-if (isset($_POST["register"])) {
-    $email = $_POST["email"];
-    $nama = $_POST["name"];
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["register"])) {
+    $email = trim($_POST["email"]);
+    $nama = trim($_POST["name"]);
     $kataSandi = $_POST["password"];
     $kota = $_POST["lokasi"];
-    $noHP = $_POST["phone"];
-    if ($user->new_user($email, $nama, $kataSandi, $kota, $noHP)) {
-        echo "Berhasil Mendaftar";
+    $noHP = trim($_POST["phone"]);
+
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Email tidak valid.";
+    } elseif ($user->cekUser($email)) {
+        echo "Email sudah digunakan.";
+    } elseif (strlen($kataSandi) < 8) {
+        echo "Kata sandi harus minimal 8 karakter.";
+    } elseif (empty($nama) || empty($kota) || empty($noHP)) {
+        echo "Semua field harus diisi.";
     } else {
-        echo "Gagal Mendaftar";
+        if ($user->new_user($email, $kataSandi, $nama, $kota, $noHP)) {
+            echo "Berhasil Mendaftar";
+        } else {
+            echo "Gagal Mendaftar";
+        }
     }
 }
-
-
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -55,7 +65,7 @@ if (isset($_POST["register"])) {
     </div>
 
     <!-- form login -->
-    <form class="bg-white p-8 w-96 lg:w-1/2 xl:w-1/3 mx-auto lg:mt-32" method="POST">
+    <form class="bg-white p-8 w-96 lg:w-1/2 xl:w-1/3 mx-auto lg:mt-32" method="post">
         <!-- Nama -->
         <div class="mt-8">
             <label for="name" class="block font-nunito font-medium text-[#828282]">Nama</label>
@@ -80,7 +90,8 @@ if (isset($_POST["register"])) {
         <!-- Pilih Lokasi Anda -->
         <div class="mt-8">
             <label for="lokasi" class="block font-nunito font-medium text-[#828282]">Kota</label>
-            <select id="lokasi" name="lokasi" class="w-full border-b-2 border-[#ff9028] focus:outline-none focus:border-[#ff9028]">
+            <select id="lokasi" name="lokasi"
+                class="w-full border-b-2 border-[#ff9028] focus:outline-none focus:border-[#ff9028]">
                 <option value="" disabled selected>Kota</option>
                 <option value="lokasi1">Lokasi 1</option>
                 <option value="lokasi2">Lokasi 2</option>
@@ -104,14 +115,16 @@ if (isset($_POST["register"])) {
         <!-- Syarat dan Ketentuan -->
         <div class="mt-4 flex items-center gap-2">
             <input type="checkbox" class="-mt-5">
-            <label for="forgot" class="block font-nunito text-xs leading-5 tracking-tight text-[#828282] text-left">Saya setuju dan telah membaca <span class="text-[#ff9028]">Syarat</span> dan <span class="text-[#ff9028]">Ketentuan</span> dari pihak Desa Digital</label>
+            <label for="forgot" class="block font-nunito text-xs leading-5 tracking-tight text-[#828282] text-left">Saya
+                setuju dan telah membaca <span class="text-[#ff9028]">Syarat</span> dan <span
+                    class="text-[#ff9028]">Ketentuan</span> dari pihak Desa Digital</label>
         </div>
 
         <!-- Daftar -->
-        <button type="submit"
-            value="register"
-            type="submit"
-            class="mt-7 m-2 w-full rounded-full bg-[#ff9028] text-white font-nunito font-semibold py-3">Buat Akun</button>
+        <button type="submit" name="register"
+            class="mt-7 m-2 w-full rounded-full bg-[#ff9028] text-white font-nunito font-semibold py-3">
+            Buat Akun
+        </button>
 
         <!-- Masuk -->
         <div class="mt-4 mb-20 text-center">
