@@ -16,6 +16,7 @@ module.exports = {
     fontFamily: {
       sans: ['"Poppins"', "sans-serif"],
       nunito: ['"Nunito Sans"', "sans-serif"],
+      HK-Grostek: ['"HK Grotesk"', "sans-serif"],
     },
     extend: {},
   },
