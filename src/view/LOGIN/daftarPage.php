@@ -1,3 +1,25 @@
+<?php
+include "../../controller/user.php";
+
+$user = new User();
+
+$email = $_POST["email"];
+$nama = $_POST["name"];
+$kataSandi = $_POST["password"];
+$kota = $_POST["lokasi"];
+$noHP = $_POST["phone"];
+
+if (isset($_POST["register"])) {
+    if ($user->new_user($email, $nama, $kataSandi, $kota, $noHP)) {
+        header("Location: ./OTP.php");
+    } else {
+        echo "Gagal Mendaftar";
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -58,9 +80,9 @@
 
         <!-- Pilih Lokasi Anda -->
         <div class="mt-8">
-            <label for="lokasi" class="block font-nunito font-medium text-[#828282]">Pilih Lokasi Anda</label>
+            <label for="lokasi" class="block font-nunito font-medium text-[#828282]">Kota</label>
             <select id="lokasi" name="lokasi" class="w-full border-b-2 border-[#ff9028] focus:outline-none focus:border-[#ff9028]">
-                <option value="" disabled selected>Pilih Lokasi</option>
+                <option value="" disabled selected>Kota</option>
                 <option value="lokasi1">Lokasi 1</option>
                 <option value="lokasi2">Lokasi 2</option>
                 <option value="lokasi3">Lokasi 3</option>
@@ -88,6 +110,7 @@
 
         <!-- Daftar -->
         <button type="submit"
+            value="register"
             class="mt-7 m-2 w-full rounded-full bg-[#ff9028] text-white font-nunito font-semibold py-3">Buat Akun</button>
 
         <!-- Masuk -->

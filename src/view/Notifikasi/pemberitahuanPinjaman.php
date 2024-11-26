@@ -40,7 +40,9 @@
         </h6>
     </header>
     <section class="w-[90%] flex flex-col items-center">
+        <div class="flex flex-col items-center h-fit w-fit">
 
+        </div>
     </section>
 </body>
 
