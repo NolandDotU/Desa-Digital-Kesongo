@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["register"])) {
         <!-- Email -->
         <div class="mt-8">
             <label for="email" class="block font-nunito font-medium text-[#828282]">Email</label>
-            <input type="email" id="email" name="email"
+            <input type="email" id="email" name="email" required
                 class="w-full border-b-2 border-[#ff9028] focus:outline-none focus:border-[#ff9028]">
         </div>
 

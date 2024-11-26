@@ -1,3 +1,31 @@
+<?php
+include "../../controller/user.php";
+
+$user = new User();
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["login"])) {
+    $identifier = trim($_POST["email"]);
+    $kataSandi = $_POST["password"];
+    $noHP = trim($_POST["phone"]);
+
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Email tidak valid.";
+    } elseif (strlen($kataSandi) < 8) {
+        echo "Kata sandi harus minimal 8 karakter.";
+    } else {
+        if ($user->loginUser($identifier, $kataSandi)) {
+            echo "Berhasil Login";
+        } else {
+            echo "Gagal Login";
+        }
+    }
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -32,10 +60,10 @@
     </div>
 
     <!-- form login -->
-    <form class="bg-white p-8 w-96 lg:w-1/2 xl:w-1/3 mx-auto lg:mt-32">
+    <form class="bg-white p-8 w-96 lg:w-1/2 xl:w-1/3 mx-auto lg:mt-32" method="post">
         <!-- Email -->
         <div class="mt-8">
-            <label for="email" class="block font-nunito font-medium text-[#828282]">Email</label>
+            <label for="email" class="block font-nunito font-medium text-[#828282]">Email / No. Whatsapp</label>
             <input type="email" id="email" name="email"
                 class="w-full border-b-2 border-[#ff9028] focus:outline-none focus:border-[#ff9028]">
         </div>
@@ -60,6 +88,7 @@
 
         <!-- Masuk -->
         <button type="submit"
+            value="login"
             class="mt-8 w-full rounded-full bg-[#ff9028] text-white font-nunito font-extrabold py-2">Masuk</button>
 
         <!-- Daftar -->

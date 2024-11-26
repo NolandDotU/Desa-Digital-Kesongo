@@ -1,7 +1,7 @@
 <?php
 class User
 {
-    private $host = "localhost";
+    private $host = "localhost:3307";
     private $nama = "dbkesongo";
     private $user = "root";
     private $kata_sandi = "";
@@ -67,8 +67,4 @@ class User
             ];
         }
     }
-
-
 }
-
-?>
