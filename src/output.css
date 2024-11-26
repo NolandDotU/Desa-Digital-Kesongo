@@ -703,12 +703,32 @@ video {
   height: 100px;
 }
 
+.h-\[1px\] {
+  height: 1px;
+}
+
 .h-\[44px\] {
   height: 44px;
 }
 
+.h-\[63px\] {
+  height: 63px;
+}
+
 .h-\[68px\] {
   height: 68px;
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-\[83px\] {
+  height: 83px;
+}
+
+.h-\[8px\] {
+  height: 8px;
 }
 
 .h-fit {
@@ -748,6 +768,10 @@ video {
   width: 24rem;
 }
 
+.w-\[147px\] {
+  width: 147px;
+}
+
 .w-\[333px\] {
   width: 333px;
 }
@@ -756,8 +780,20 @@ video {
   width: 339px;
 }
 
+.w-\[343px\] {
+  width: 343px;
+}
+
+.w-\[375px\] {
+  width: 375px;
+}
+
 .w-\[573px\] {
   width: 573px;
+}
+
+.w-\[70px\] {
+  width: 70px;
 }
 
 .w-\[80\%\] {
@@ -845,6 +881,10 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.self-center {
+  align-self: center;
+}
+
 .overflow-scroll {
   overflow: scroll;
 }
@@ -916,6 +956,21 @@ video {
 .border-grey6 {
   --tw-border-opacity: 1;
   border-color: rgb(242 242 242 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[\#F6F7FA\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 247 250 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#f5f6f9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 246 249 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#fc8210\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 130 16 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#fefefe\] {
@@ -1035,12 +1090,24 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.pb-\[12px\] {
+  padding-bottom: 12px;
+}
+
+.pb-\[18px\] {
+  padding-bottom: 18px;
+}
+
 .pb-\[19px\] {
   padding-bottom: 19px;
 }
 
 .pb-\[20px\] {
   padding-bottom: 20px;
+}
+
+.pb-\[25px\] {
+  padding-bottom: 25px;
 }
 
 .pl-4 {
@@ -1071,8 +1138,8 @@ video {
   padding-left: 31px;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
+.pr-\[18px\] {
+  padding-right: 18px;
 }
 
 .pt-14 {
@@ -1105,6 +1172,10 @@ video {
 
 .pt-\[20px\] {
   padding-top: 20px;
+}
+
+.pt-\[24px\] {
+  padding-top: 24px;
 }
 
 .text-left {
@@ -1185,9 +1256,19 @@ video {
   color: rgb(51 51 51 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#4f4f4f\] {
+  --tw-text-opacity: 1;
+  color: rgb(79 79 79 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#828282\] {
   --tw-text-opacity: 1;
   color: rgb(130 130 130 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#bdbdbd\] {
+  --tw-text-opacity: 1;
+  color: rgb(189 189 189 / var(--tw-text-opacity, 1));
 }
 
 .text-\[\#ff9028\] {
