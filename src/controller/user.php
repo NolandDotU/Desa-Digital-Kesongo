@@ -16,31 +16,29 @@ class User
 
 
 
-    public function cekUser($email)
-    {
-        $query = $this->db->prepare("SELECT * FROM tbkesongo WHERE email = $email");
-        $query->bindParam(":email", $email);
-        if ($query->execute()) {
-        }
-    }
+    // public function cekUser($email)
+    // {
+    //     $query = $this->db->prepare("SELECT * FROM tb_user WHERE email = $email");
+    //     $query->bindParam(":email", $email);
+    //     if ($query->execute()) {
+    //         return true;
+    //     }
+    //     return false;
+    // }
     public function new_user($email, $kata_sandi, $nama, $no_hp, $kota)
     {
-        if ($this->cekUser($email)) {
-            return false;
-        }
+        // if ($this->cekUser($email)) {
+        //     return false;
+        // }
 
-        $query = $this->db->prepare("INSERT INTO tbkesongo(email,kata_sandi,nama,no_hp,kota) VALUES(:email,:kata_sandi,:nama,:no_hp,:kota)");
+        $query = $this->db->prepare("INSERT INTO tb_user(email,kata_sandi,nama,no_hp,kota) VALUES(:email,:kata_sandi,:nama,:no_hp,:kota)");
         $query->bindParam(":email", $email);
         $query->bindParam(":kata_sandi", $kata_sandi);
         $query->bindParam(":nama", $nama);
         $query->bindParam(":no_hp", $no_hp);
         $query->bindParam(":kota", $kota);
 
-        if ($query->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        return $query->execute();
     }
 
     public function login($email, $kata_sandi)

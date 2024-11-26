@@ -3,8 +3,6 @@ include "../../controller/user.php";
 
 $user = new User();
 
-
-
 if (isset($_POST["register"])) {
     $email = $_POST["email"];
     $nama = $_POST["name"];
@@ -57,7 +55,7 @@ if (isset($_POST["register"])) {
     </div>
 
     <!-- form login -->
-    <form class="bg-white p-8 w-96 lg:w-1/2 xl:w-1/3 mx-auto lg:mt-32">
+    <form class="bg-white p-8 w-96 lg:w-1/2 xl:w-1/3 mx-auto lg:mt-32" method="POST">
         <!-- Nama -->
         <div class="mt-8">
             <label for="name" class="block font-nunito font-medium text-[#828282]">Nama</label>
@@ -112,6 +110,7 @@ if (isset($_POST["register"])) {
         <!-- Daftar -->
         <button type="submit"
             value="register"
+            type="submit"
             class="mt-7 m-2 w-full rounded-full bg-[#ff9028] text-white font-nunito font-semibold py-3">Buat Akun</button>
 
         <!-- Masuk -->
