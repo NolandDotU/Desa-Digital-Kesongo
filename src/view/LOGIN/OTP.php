@@ -7,7 +7,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="../../output.css">
 
     <!-- font Nunito Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
         <!-- arrow back -->
         <img src="/assets/ic_round-arrow-back.svg" class="w-10 z-10 lg:pl-0 lg:pt-20" alt="">
 
-    <!-- Verifikasi Email -->
+        <!-- Verifikasi Email -->
         <h3 class="font-nunito font-semibold text-base text-2xl z-10 tracking-tight text-black">
             Verifikasi Email</h3>
     </div>
