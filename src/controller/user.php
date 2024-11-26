@@ -39,6 +39,35 @@ class User
 
         return $query->rowCount() > 0;
     }
+    public function loginUser($identifier, $kata_sandi)
+    {
+        $query = $this->db->prepare("SELECT * FROM tb_user WHERE email = :identifier OR no_hp = :identifier");
+        $query->bindParam(":identifier", $identifier);
+        $query->execute();
+
+        if ($query->rowCount() > 0) {
+            $user = $query->fetch(PDO::FETCH_ASSOC);
+
+            if (password_verify($kata_sandi, $user['kata_sandi'])) {
+                return [
+                    'status' => true,
+                    'message' => 'Login berhasil',
+                    'data' => $user
+                ];
+            } else {
+                return [
+                    'status' => false,
+                    'message' => 'Kata sandi salah'
+                ];
+            }
+        } else {
+            return [
+                'status' => false,
+                'message' => 'Email atau nomor telepon tidak terdaftar'
+            ];
+        }
+    }
+
 
 }
 
