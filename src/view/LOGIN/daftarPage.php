@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["register"])) {
         </div>
 
         <!-- Daftar -->
-        <button type="submit" name="register"
+        <button type="submit" name="register" 
             class="mt-7 m-2 w-full rounded-full bg-[#ff9028] text-white font-nunito font-semibold py-3">
             Buat Akun
         </button>

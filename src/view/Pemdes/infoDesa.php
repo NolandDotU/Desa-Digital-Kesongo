@@ -34,7 +34,7 @@
         </button>
         <h6
             class="text-center font-nunito font-semibold text-lg text-grey1 w-full justify-center">
-            Notifikasi
+            Informasi Desa
         </h6>
     </header>
     <section class="flex flex-col items-center ">
