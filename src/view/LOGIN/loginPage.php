@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["login"])) {
 
         <!-- Daftar -->
         <div class="mt-8 mb-52 text-center">
-            <p class="font-nunito font-medium text-[#828282]">Belum mempunyai akun? <a href="daftarPage.html"
+            <p class="font-nunito font-medium text-[#828282]">Belum mempunyai akun? <a href="./daftarPage.php"
                     class="text-[#ff9028]">Buat Akun</a></p>
         </div>
     </form>

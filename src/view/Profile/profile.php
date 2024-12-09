@@ -28,7 +28,7 @@
   <header
     class="flex bg-primary w-full justify-center items-center">
     <h6
-      class="flex justify-between text-left font-nunito font-semibold text-lg pl-5 pb-2 textred text-white w-full justify-center">
+      class="flex justify-between text-left font-nunito font-semibold text-lg pl-5 pb-2 textred text-white w-full ">
       Profile
       <img src="/src/assets/uil_edit.png" class="pr-[18px]" alt="">
     </h6>
@@ -162,7 +162,7 @@
       </div>
 
       <!-- SCAN QR -->
-       <div class="absolute w-[70px] h-[70px] bg-[#fc8210] rounded-full shadow"></div>
+      <div class="absolute w-[70px] h-[70px] bg-[#fc8210] rounded-full shadow"></div>
 
       <!-- NOTIFIKASI -->
       <div class="flex flex-col items-center">

@@ -40,7 +40,32 @@
             Layanan Desa
         </h6>
     </header>
-    <section class="flex flex-col items-center ">
+    <section class="flex flex-col items-center bg-black ">
+
+        <div id="modal-wrapper" class="fixed z-10 inset-0">
+            <!-- modal pop up -->
+            <div class="h-screen flex items-end w-full bg-grey1 bg-opacity-50">
+                <div class="h-[40%] flex flex-col justify-start items-center bg-white w-full rounded-t-3xl ">
+                    <div class="w-[90%] justify-between items-center flex bg-grey1 py-4">
+                        <h1 class="w-full font-nunito text-base tracking-tight font-semibold">
+                            Pengajuan Surat
+                        </h1>
+                        <button class="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="ion:close">
+                                    <path id="Vector" d="M13.5909 12L18.0441 7.54687C18.2554 7.3359 18.3743 7.04961 18.3745 6.75099C18.3748 6.45237 18.2564 6.16587 18.0455 5.95453C17.8345 5.74319 17.5482 5.62431 17.2496 5.62404C16.951 5.62378 16.6645 5.74215 16.4531 5.95312L12 10.4062L7.54687 5.95312C7.33553 5.74178 7.04888 5.62305 6.75 5.62305C6.45111 5.62305 6.16447 5.74178 5.95312 5.95312C5.74178 6.16447 5.62305 6.45111 5.62305 6.75C5.62305 7.04888 5.74178 7.33553 5.95312 7.54687L10.4062 12L5.95312 16.4531C5.74178 16.6645 5.62305 16.9511 5.62305 17.25C5.62305 17.5489 5.74178 17.8355 5.95312 18.0469C6.16447 18.2582 6.45111 18.3769 6.75 18.3769C7.04888 18.3769 7.33553 18.2582 7.54687 18.0469L12 13.5937L16.4531 18.0469C16.6645 18.2582 16.9511 18.3769 17.25 18.3769C17.5489 18.3769 17.8355 18.2582 18.0469 18.0469C18.2582 17.8355 18.3769 17.5489 18.3769 17.25C18.3769 16.9511 18.2582 16.6645 18.0469 16.4531L13.5909 12Z" fill="#333333" />
+                                </g>
+                            </svg>
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
         <div class=" flex w-[90%] h-fit mx-4 py-4 justify-center bg-primeSupSoft items-center space-x-10 rounded-lg mt-9">
             <h1 class="text-base font-nunito text-grey1 max-w-44 font-semibold">Akses 46 Jenis Surat dari Desa Dengan Mudah.</h1>
             <div class="bg-primeExtSoft p-4 rounded-lg ">
